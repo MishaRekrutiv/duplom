@@ -25,23 +25,34 @@ public abstract class MethodsForImage {
       int w = 39;
       int h = 39;
       int lim= 72;
-      BufferedImage image1 = image.getSubimage(71,172,972,255);
+      BufferedImage image1 = image.getSubimage(64,175,1110,255);
       writeImage(image1,"D:\\docs/f/img1.jpeg");
-        System.out.println(image.getMinX());
-        System.out.println(image.getWidth());
-        System.out.println(image.getHeight());
-        System.out.println(image.getMinY());
-      for (int i = 0; i < 4; i++) {
-        BufferedImage image2= image1.getSubimage(0,0+i*lim ,w,h);
-        writeImage(image2, "D:\\docs/f/imgage"+i+".jpeg");
+//        System.out.println(image.getMinX());
+//        System.out.println(image.getWidth());
+//        System.out.println(image.getHeight());
+//        System.out.println(image.getMinY());
+////      for (int i = 0; i < 4; i++) {
+//        BufferedImage image2= image1.getSubimage(0,0+i*lim ,w,h);
+//        writeImage(image2, "D:\\docs/f/imgage"+i+".jpeg");
+//      }
+        for (int j = 1; j < 16; j++) {
+
+      for (int i = 1; i < 5; i++) {
+        BufferedImage image2= image1.getSubimage(0+(j-1)*lim,0+(i-1)*lim ,w,h);
+//          System.out.println(image1.getWidth() + " " + j*lim + "  " + j);
+//          System.out.println(image1.getHeight());
+
+          writeImage(image2, "D:\\docs/f/image"+j+"i"+i+".jpeg");
       }
+        }
+//
 //    BufferedImage image2= image1.getSubimage(0,0 ,39,39);
 //    writeImage(image2, "D:\\docs/f/img2.jpeg");
-//    BufferedImage image3= image1.getSubimage(0,72 ,39,39);
+//    BufferedImage image3= image1.getSubimage(72,0 ,39,39);
 //    writeImage(image3, "D:\\docs/f/img3.jpeg");
-//    BufferedImage image4= image1.getSubimage(0,144 ,39,39);
+//    BufferedImage image4= image1.getSubimage(144,0 ,39,39);
 //    writeImage(image4, "D:\\docs/f/img4.jpeg");
-//    BufferedImage image5= image1.getSubimage(0,216 ,39,39);
+//    BufferedImage image5= image1.getSubimage(216,0 ,39,39);
 //    writeImage(image5, "D:\\docs/f/img5.jpeg");
 
     }
